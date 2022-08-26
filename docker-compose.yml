@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  clojure-api:
+    image: ${IMAGE}
+    build:
+      context: .
+    ports:
+      - "4000:8080"
+    working_dir: /usr/src/app
+    command:  "java -jar target/default+uberjar/clojure-rest-api-0.0.1-standalone.jar"

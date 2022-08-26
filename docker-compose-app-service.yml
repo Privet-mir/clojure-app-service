@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  clojure-api:
+    image: repo.azureacr.io:0.0.1
+    ports:
+      - "443:8080"
+    working_dir: /usr/src/app
+    command:  "java -jar target/default+uberjar/clojure-rest-api-0.0.1-standalone.jar"
